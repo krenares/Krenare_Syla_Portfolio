@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krenare Syla | Software Engineer</title>
-  <meta name="description" content="Krenare Syla - Software Engineer portfolio featuring selected projects, skills, and contact links." />
+  <meta name="description" content="Krenare Syla - Software Engineer portfolio featuring selected projects, skills, resume, and contact links." />
 
   <style>
     :root{
@@ -22,7 +22,6 @@
 
     * { box-sizing: border-box; }
     body{
-      
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       background: radial-gradient(1200px 700px at 20% 0%, rgba(56,189,248,0.18), transparent 60%),
@@ -32,14 +31,12 @@
       line-height: 1.55;
     }
 
-    a{ color: inherit; }
     .wrap{
       max-width: 980px;
       margin: 0 auto;
       padding: 44px 20px 56px;
     }
 
-    /* Top nav */
     .topbar{
       display:flex;
       align-items:center;
@@ -49,168 +46,91 @@
       border: 1px solid var(--border);
       background: var(--panel2);
       border-radius: 999px;
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 14px;
-      z-index: 10;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap: 10px;
       font-weight: 700;
-      letter-spacing: -0.2px;
       font-size: 14px;
-      white-space: nowrap;
     }
+
     .dot{
-      width: 10px; height: 10px;
+      width: 10px;
+      height: 10px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(56,189,248,0.14);
     }
-    nav{
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 8px;
-    }
+
     nav a{
       text-decoration:none;
       color: var(--muted);
       font-weight: 600;
       font-size: 13px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    nav a:hover{
-      color: var(--text);
-      border-color: var(--border);
-      background: rgba(255,255,255,0.04);
+      margin-left: 10px;
     }
 
-    /* Hero */
     header{
       padding: 26px 0 8px;
       margin-top: 18px;
     }
+
     h1{
       margin: 0;
-      font-size: clamp(32px, 5vw, 44px);
-      letter-spacing: -0.8px;
-      line-height: 1.1;
+      font-size: 40px;
     }
+
     .subtitle{
       margin-top: 10px;
       color: var(--muted);
-      font-size: 16px;
-      max-width: 70ch;
     }
+
     .cta{
       margin-top: 18px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
     }
+
     .btn{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 12px;
+      display:inline-block;
+      margin-right: 10px;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
       border: 1px solid var(--border);
       background: rgba(255,255,255,0.04);
       text-decoration:none;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 14px;
     }
-    .btn:hover{ background: rgba(255,255,255,0.07); }
+
     .btn.primary{
-      border-color: rgba(56,189,248,0.35);
       background: var(--accent2);
       color: var(--accent);
+      border-color: rgba(56,189,248,0.35);
     }
 
-    /* Sections */
-    section{ margin-top: 34px; }
-    .section-title{
-      display:flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
+    section{
+      margin-top: 40px;
     }
+
     h2{
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: -0.2px;
-    }
-    .hint{
-      color: var(--muted);
-      font-size: 13px;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    /* Cards */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-    }
     .card{
       border: 1px solid var(--border);
       background: var(--panel);
       border-radius: var(--radius);
       padding: 16px;
-      box-shadow: var(--shadow);
-    }
-    .card h3{
-      margin: 0 0 6px;
-      font-size: 17px;
-      letter-spacing: -0.2px;
-    }
-    .desc{
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .meta{
-      margin: 0 0 12px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .meta b{ color: var(--text); font-weight: 700; }
-    .actions{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tagrow{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 6px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: rgba(0,0,0,0.12);
+      margin-top: 15px;
     }
 
-    /* Footer */
     footer{
-      margin-top: 42px;
-      color: var(--muted);
-      font-size: 13px;
+      margin-top: 60px;
       text-align:center;
-    }
-    .small{
       color: var(--muted);
-      font-size: 13px;
-      margin-top: 8px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -220,7 +140,7 @@
 
     <div class="topbar">
       <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
+        <span class="dot"></span>
         <span>Krenare Syla</span>
       </div>
       <nav>
@@ -234,140 +154,56 @@
     <header>
       <h1>Software Engineer</h1>
       <p class="subtitle">
-        M.S. Computer Science Candidate. Backend-leaning full-stack builder focused on clean APIs,
-        reliable systems, and practical products.
+        M.S. Computer Science Candidate focused on backend systems, APIs, and scalable applications.
       </p>
 
       <div class="cta">
-        <!-- Replace YOUR_USERNAME / YOUR_LINK / resume.pdf -->
-        <a class="btn primary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/YOUR_LINK" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-        <a class="btn" href="mailto:your.email@example.com">Email</a>
+        <a class="btn primary" href="https://github.com/krenares" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/krenaresyla/" target="_blank">LinkedIn</a>
+        <a class="btn" href="resume.pdf" target="_blank">Resume</a>
+        <a class="btn" href="mailto:krenaresyla13@gmail.com">Email</a>
       </div>
     </header>
 
     <section id="projects">
-      <div class="section-title">
-        <h2>Projects</h2>
-        <div class="hint">Links → live demo + code</div>
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>AI Tutor Application</h3>
+        <p>Full-stack AI tutoring app with authentication and structured AI feedback flow.</p>
+        <p><strong>Tech:</strong> FastAPI, React, PostgreSQL</p>
+        <a class="btn" href="https://github.com/krenares/YOUR_REPO_NAME" target="_blank">GitHub Repo</a>
       </div>
 
-      <div class="grid">
-        <!-- Project 1 -->
-        <article class="card">
-          <h3>AI Tutor App</h3>
-          <p class="desc">
-            Full-stack tutoring app with an AI “bellwork” flow that gives structured feedback and helps students improve responses.
-          </p>
-          <p class="meta"><b>Tech:</b> FastAPI · React · PostgreSQL</p>
-
-          <div class="actions">
-            <!-- If you don’t have a live demo yet, remove that button. -->
-            <a class="btn primary" href="https://YOUR_LIVE_DEMO_LINK" target="_blank" rel="noreferrer">Live Demo</a>
-            <a class="btn" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-
-          <div class="tagrow">
-            <span class="tag">Auth</span>
-            <span class="tag">REST API</span>
-            <span class="tag">AI Feedback</span>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="card">
-          <h3>Project Name #2</h3>
-          <p class="desc">
-            One line on what it does + one line on impact (performance, reliability, automation, UX, etc.).
-          </p>
-          <p class="meta"><b>Tech:</b> Java · Spring Boot · SQL</p>
-
-          <div class="actions">
-            <a class="btn primary" href="https://YOUR_LIVE_DEMO_LINK" target="_blank" rel="noreferrer">Live Demo</a>
-            <a class="btn" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-
-          <div class="tagrow">
-            <span class="tag">API</span>
-            <span class="tag">Testing</span>
-            <span class="tag">DB</span>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="card">
-          <h3>Project Name #3</h3>
-          <p class="desc">
-            One to two sentences. Mention what problem it solves and what you implemented (feature, refactor, optimization).
-          </p>
-          <p class="meta"><b>Tech:</b> (Add your tech stack)</p>
-
-          <div class="actions">
-            <a class="btn" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-
-          <div class="tagrow">
-            <span class="tag">Feature</span>
-            <span class="tag">Refactor</span>
-          </div>
-        </article>
-      </div>
-
-      <p class="small">
-        Tip: If a project isn’t deployed yet, it’s fine — keep the GitHub link + add screenshots in the repo README.
-      </p>
     </section>
 
     <section id="skills">
-      <div class="section-title">
-        <h2>Skills</h2>
-        <div class="hint">Keep it tight</div>
-      </div>
-
+      <h2>Skills</h2>
       <div class="card">
-        <p class="meta">
-          <b>Languages:</b> Python · Java · JavaScript · SQL<br/>
-          <b>Frameworks:</b> FastAPI · React<br/>
-          <b>Tools:</b> Git · Postman · (Docker if applicable)
-        </p>
+        Python · Java · JavaScript · SQL · FastAPI · React · REST APIs · Git
       </div>
     </section>
 
     <section id="resume">
-      <div class="section-title">
-        <h2>Resume</h2>
-        <div class="hint">PDF in repo</div>
-      </div>
-
+      <h2>Resume</h2>
       <div class="card">
-        <p class="desc">Add <b>resume.pdf</b> to your repository root so this button works.</p>
-        <a class="btn primary" href="resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
+        <a class="btn primary" href="resume.pdf" target="_blank">Open Resume</a>
       </div>
     </section>
 
     <section id="contact">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <div class="hint">Best ways to reach you</div>
-      </div>
-
+      <h2>Contact</h2>
       <div class="card">
-        <p class="meta">
-          <b>Email:</b> <a href="mailto:your.email@example.com">your.email@example.com</a><br/>
-          <b>GitHub:</b> <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">github.com/YOUR_USERNAME</a><br/>
-          <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/YOUR_LINK" target="_blank" rel="noreferrer">linkedin.com/in/YOUR_LINK</a>
-        </p>
+        <p>Email: krenaresyla13@gmail.com</p>
+        <p>GitHub: https://github.com/krenares</p>
+        <p>LinkedIn: www.linkedin.com/in/krenaresyla/</p>
       </div>
     </section>
 
     <footer>
-      © <span id="y"></span> Krenare Syla
+      © <script>document.write(new Date().getFullYear())</script> Krenare Syla
     </footer>
-  </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
