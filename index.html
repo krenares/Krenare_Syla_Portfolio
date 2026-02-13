@@ -6,7 +6,7 @@
   <title>Krenare Syla | Software Engineer</title>
   <meta
     name="description"
-    content="Krenare Syla - Software Engineer in Houston, TX. Backend & full-stack (Python, Django, FastAPI, React, PostgreSQL). AI-enabled features with LLMs. Projects, experience, education, and contact."
+    content="Krenare Syla - Software Engineer portfolio. Backend systems, APIs, and AI-enabled applications. Featured projects, experience snapshot, skills, education, and contact."
   />
 
   <style>
@@ -21,6 +21,7 @@
       --accent2: rgba(56,189,248,0.18);
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
       --radius: 16px;
+      --radius2: 22px;
     }
 
     * { box-sizing: border-box; }
@@ -86,37 +87,31 @@
     header{
       padding: 26px 0 8px;
       margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    @media (min-width: 760px){
+      header{ grid-template-columns: 1fr auto; }
     }
 
     h1{
       margin: 0;
       font-size: 42px;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.6px;
     }
 
     .subtitle{
       margin-top: 10px;
       color: var(--muted);
       max-width: 72ch;
-    }
-
-    .meta{
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pill{
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      padding: 6px 10px;
-      border-radius: 999px;
+      font-size: 15px;
     }
 
     .cta{
-      margin-top: 18px;
+      margin-top: 16px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -132,7 +127,6 @@
       text-decoration:none;
       font-weight: 650;
       font-size: 14px;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
       transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
     }
     .btn:hover{
@@ -144,6 +138,28 @@
       background: var(--accent2);
       color: var(--accent);
       border-color: rgba(56,189,248,0.35);
+    }
+
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .avatarHint{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
     }
 
     section{ margin-top: 42px; }
@@ -166,7 +182,7 @@
     .card{
       border: 1px solid var(--border);
       background: var(--panel);
-      border-radius: var(--radius);
+      border-radius: var(--radius2);
       padding: 16px;
     }
 
@@ -195,12 +211,11 @@
     ul{
       margin: 10px 0 0;
       padding-left: 18px;
-      color: var(--text);
     }
     li{ margin: 6px 0; }
 
     .taglist{
-      margin-top: 10px;
+      margin-top: 12px;
       display:flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -214,14 +229,14 @@
       border-radius: 999px;
     }
 
-    footer{
-      margin-top: 60px;
-      text-align:center;
+    .kicker{
+      font-size: 12px;
       color: var(--muted);
-      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
 
-    /* small helpers */
     a.inline{
       color: var(--accent);
       text-decoration: none;
@@ -229,6 +244,13 @@
     }
     a.inline:hover{
       border-bottom-color: rgba(56,189,248,0.7);
+    }
+
+    footer{
+      margin-top: 60px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 14px;
     }
   </style>
 </head>
@@ -242,9 +264,8 @@
         <span>Krenare Syla</span>
       </div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -252,143 +273,159 @@
     </div>
 
     <header>
-      <h1>Software Engineer</h1>
-      <p class="subtitle">
-        Software Engineer focused on scalable backend and full-stack applications using Python, Django, React, PostgreSQL, and cloud infrastructure.
-        Experienced building AI-enabled features with LLMs, prompt engineering, and API integrations.
-      </p>
+      <div>
+        <div class="kicker">Software Engineer</div>
+        <h1>Krenare Syla</h1>
+        <p class="subtitle">
+          Backend-focused engineer building scalable APIs, integrations, and AI-enabled applications.
+          Comfortable across the stack (FastAPI/Django + React) with a strong emphasis on reliability and clean system design.
+        </p>
 
-      <div class="meta">
-        <span class="pill">Houston, TX</span>
-        <span class="pill">832-855-5958</span>
-        <span class="pill">M.S. Computer Science (Software Engineering), GPA 4.0</span>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          <a class="btn" href="mailto:krenaresyla13@gmail.com">Email</a>
+        </div>
       </div>
 
-      <div class="cta">
-        <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-        <a class="btn" href="mailto:krenaresyla13@gmail.com">Email</a>
+      <!-- Photo is optional — add your LinkedIn headshot as /assets/profile.jpg -->
+      <div>
+        <div class="avatar" title="Profile photo">
+          <!-- Replace this with your actual image path -->
+          <img src="assets/profile.jpg" alt="Krenare Syla headshot" />
+        </div>
+        <div class="avatarHint">Optional photo</div>
       </div>
     </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p class="muted" style="margin:0;">
-          I build backend services and full-stack applications with a focus on clean APIs, reliability, and maintainability.
-          I’ve worked on production systems with high-volume integrations (e-commerce + accounting workflows), data pipelines, and cloud deployments.
-          I also enjoy building AI-enabled features by integrating LLMs into real applications.
-        </p>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="card">
-        <div class="row">
-          <div>
-            <h3 style="margin:0;">Software Engineer — Sam Management and Marketing INC</h3>
-            <div class="muted">Houston, TX</div>
-          </div>
-          <div class="when">Sep 2023 – Jun 2025</div>
-        </div>
-
-        <ul>
-          <li>Developed and optimized backend services using <strong>Python</strong>, <strong>PostgreSQL</strong>, and <strong>Google Cloud</strong>, improving system efficiency by ~20%.</li>
-          <li>Built and maintained REST API integrations with <strong>Wayfair</strong>, <strong>ShipStation</strong>, <strong>Amazon</strong>, and <strong>QuickBooks</strong>, reducing manual processing by ~35%.</li>
-          <li>Engineered data pipelines and background jobs; supported cloud deployments and CI/CD for high-volume datasets.</li>
-          <li>Owned backend components and API workflows; contributed to scalable architecture and long-term maintainability.</li>
-          <li>Collaborated cross-functionally to improve reliability using microservices patterns and logging best practices.</li>
-        </ul>
-
-        <div class="taglist" aria-label="Tech tags">
-          <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Google Cloud</span><span class="tag">REST APIs</span><span class="tag">CI/CD</span><span class="tag">Microservices</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="row">
-          <div>
-            <h3 style="margin:0;">Software Developer Intern — Sam and M Group LLC</h3>
-            <div class="muted">Stafford, TX</div>
-          </div>
-          <div class="when">Jan 2023 – May 2023</div>
-        </div>
-
-        <ul>
-          <li>Developed full-stack features using <strong>Django (Python)</strong> and <strong>React</strong>.</li>
-          <li>Assisted with backend improvements, database updates, third-party API integrations, and deployment on <strong>DigitalOcean</strong>.</li>
-        </ul>
-
-        <div class="taglist">
-          <span class="tag">Django</span><span class="tag">React</span><span class="tag">APIs</span><span class="tag">DigitalOcean</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="row">
-          <div>
-            <h3 style="margin:0;">Computer Science Mentor — North American University</h3>
-            <div class="muted">Houston, TX</div>
-          </div>
-          <div class="when">Aug 2021 – Dec 2021</div>
-        </div>
-
-        <ul>
-          <li>Provided academic support to 200+ undergraduate students in Python, data structures, and algorithmic problem-solving.</li>
-        </ul>
-
-        <div class="taglist">
-          <span class="tag">Python</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span>
-        </div>
-      </div>
-    </section>
-
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
 
       <div class="grid two">
         <div class="card">
-          <h3>AI Teaching Assistant</h3>
+          <div class="row">
+            <h3 style="margin:0;">AI Teaching Assistant</h3>
+            <div class="when">LLM + Full-stack</div>
+          </div>
+
           <p class="muted" style="margin: 8px 0 0;">
-            AI-powered teaching assistant using Gemini LLM + prompt engineering, with a React frontend and FastAPI backend for real-time responses.
-            Deployed on AWS with scalable architecture.
+            An AI-powered teaching assistant that answers student questions with a structured response flow.
+            Built for speed and reliability with a clean API boundary between frontend and backend.
           </p>
+
+          <ul>
+            <li>Integrated an LLM (Gemini) with prompt patterns to keep responses consistent and safe.</li>
+            <li>Designed backend endpoints for real-time interactions and predictable response formats.</li>
+            <li>Deployed with cloud infrastructure for scalability (replace with your actual hosting).</li>
+          </ul>
+
           <p style="margin: 10px 0 0;"><strong>Tech:</strong> Python, FastAPI, React, Gemini, AWS</p>
 
           <div class="cta" style="margin-top: 12px;">
-            <!-- Replace with your actual repo + live link if you have them -->
-            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">View on GitHub</a>
+            <!-- Replace with your repo + demo links -->
+            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+          </div>
+
+          <div class="taglist">
+            <span class="tag">API Design</span><span class="tag">Prompt Engineering</span><span class="tag">Cloud Deploy</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>E-commerce Website (Bachelor’s Thesis)</h3>
+          <div class="row">
+            <h3 style="margin:0;">E-commerce Platform (Thesis)</h3>
+            <div class="when">Backend + CI/CD</div>
+          </div>
+
           <p class="muted" style="margin: 8px 0 0;">
-            Full-stack e-commerce platform implementing RESTful APIs, deployed with Docker and CI/CD pipelines.
+            Full-stack e-commerce platform focused on RESTful architecture, maintainability, and production-like deployment practices.
           </p>
+
+          <ul>
+            <li>Implemented REST APIs with clear resources, validations, and error handling.</li>
+            <li>Containerized services and set up CI/CD for consistent builds and deployments.</li>
+            <li>Modeled relational data for products, orders, and user flows.</li>
+          </ul>
+
           <p style="margin: 10px 0 0;"><strong>Tech:</strong> Django, React, PostgreSQL, Docker, CI/CD</p>
 
           <div class="cta" style="margin-top: 12px;">
-            <!-- Replace with your actual repo -->
-            <a class="btn" href="https://github.com/krenares" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">Code</a>
+          </div>
+
+          <div class="taglist">
+            <span class="tag">REST APIs</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
           </div>
         </div>
       </div>
 
       <div class="card" style="margin-top: 14px;">
-        <h3>AI Tutor Application (In Progress)</h3>
+        <div class="row">
+          <h3 style="margin:0;">AI Tutor Application</h3>
+          <div class="when">In Progress</div>
+        </div>
+
         <p class="muted" style="margin: 8px 0 0;">
-          Full-stack AI tutoring app with authentication and a structured AI feedback flow (bellwork-style learning).
+          Full-stack AI tutoring app with authentication and a structured “bellwork” learning flow.
+          Designed to produce consistent, actionable feedback to students.
         </p>
+
+        <ul>
+          <li>Authentication + role-aware flows (student-focused UX).</li>
+          <li>Backend endpoints structured for predictable AI feedback cycles.</li>
+          <li>PostgreSQL schema to support users, sessions, and learning history.</li>
+        </ul>
+
         <p style="margin: 10px 0 0;"><strong>Tech:</strong> FastAPI, React, PostgreSQL</p>
+
         <div class="cta" style="margin-top: 12px;">
           <!-- Replace YOUR_REPO_NAME -->
-          <a class="btn primary" href="https://github.com/krenares/YOUR_REPO_NAME" target="_blank" rel="noreferrer">GitHub Repo</a>
+          <a class="btn primary" href="https://github.com/krenares/YOUR_REPO_NAME" target="_blank" rel="noreferrer">Code</a>
+        </div>
+
+        <div class="taglist">
+          <span class="tag">Auth</span><span class="tag">API Contracts</span><span class="tag">Product Thinking</span>
         </div>
       </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience (Snapshot)</h2>
+
+      <div class="grid two">
+        <div class="card">
+          <div class="row">
+            <h3 style="margin:0;">Software Engineer</h3>
+            <div class="when">Sam Management & Marketing INC</div>
+          </div>
+          <p class="muted" style="margin: 8px 0 0;">
+            Built backend services and high-volume integrations (Wayfair, ShipStation, Amazon, QuickBooks).
+            Focused on reliability, scalable data flows, and cloud deployments.
+          </p>
+          <div class="taglist">
+            <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Google Cloud</span><span class="tag">Integrations</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="row">
+            <h3 style="margin:0;">Software Developer Intern</h3>
+            <div class="when">Sam and M Group LLC</div>
+          </div>
+          <p class="muted" style="margin: 8px 0 0;">
+            Developed full-stack features in Django + React and supported deployments on DigitalOcean.
+          </p>
+          <div class="taglist">
+            <span class="tag">Django</span><span class="tag">React</span><span class="tag">APIs</span><span class="tag">DigitalOcean</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top: 12px;">
+        Full details are available on the <a class="inline" href="resume.pdf" target="_blank" rel="noreferrer">resume</a>.
+      </p>
     </section>
 
     <section id="skills">
@@ -396,31 +433,23 @@
 
       <div class="grid two">
         <div class="card">
-          <h3>Languages & Frameworks</h3>
+          <h3>Core</h3>
           <p class="muted" style="margin: 8px 0 0;">
-            Python · Java · C · JavaScript · SQL · Django · React · FastAPI · Node.js
+            Backend Systems · REST APIs · Integrations · Database Design · Reliability · Clean Architecture
           </p>
+          <div class="taglist">
+            <span class="tag">API Design</span><span class="tag">Auth</span><span class="tag">Data Modeling</span><span class="tag">Observability</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Databases & Cloud</h3>
+          <h3>Technologies</h3>
           <p class="muted" style="margin: 8px 0 0;">
-            PostgreSQL · MySQL · MongoDB · AWS · Google Cloud · DigitalOcean · Docker · CI/CD
+            Python · Java · JavaScript · SQL · Django · FastAPI · React · PostgreSQL · Docker · AWS · Google Cloud
           </p>
-        </div>
-
-        <div class="card">
-          <h3>Tools & Practices</h3>
-          <p class="muted" style="margin: 8px 0 0;">
-            Git · Agile/Scrum · Jira · Monday.com · Odoo · REST APIs
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Strengths</h3>
-          <p class="muted" style="margin: 8px 0 0;">
-            Backend systems · API design · Integrations · Reliability · Maintainable code · Cross-team collaboration
-          </p>
+          <div class="taglist">
+            <span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">MongoDB</span><span class="tag">MySQL</span>
+          </div>
         </div>
       </div>
     </section>
@@ -430,46 +459,32 @@
 
       <div class="card">
         <div class="row">
-          <div>
-            <h3 style="margin:0;">North American University</h3>
-            <div class="muted">Houston, TX</div>
-          </div>
-          <div class="when">Aug 2025 – Present</div>
+          <h3 style="margin:0;">M.S. Computer Science (Software Engineering)</h3>
+          <div class="when">North American University</div>
         </div>
-        <p style="margin: 10px 0 0;">
-          <strong>M.S. in Computer Science (Software Engineering)</strong> — GPA: 4.0
+        <p class="muted" style="margin: 8px 0 0;">
+          Houston, TX · (Aug 2025 – Present)
         </p>
       </div>
 
-      <div class="card">
+      <div class="card" style="margin-top: 14px;">
         <div class="row">
-          <div>
-            <h3 style="margin:0;">North American University</h3>
-            <div class="muted">Houston, TX</div>
-          </div>
-          <div class="when">Aug 2019 – May 2023</div>
+          <h3 style="margin:0;">B.S. Computer Science</h3>
+          <div class="when">North American University</div>
         </div>
-        <p style="margin: 10px 0 0;">
-          <strong>B.S. in Computer Science</strong>, Minor in Business Administration — GPA: 4.0 (Valedictorian)
+        <p class="muted" style="margin: 8px 0 0;">
+          Houston, TX · (Aug 2019 – May 2023)
         </p>
-      </div>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <div class="card">
-        <p class="muted" style="margin:0 0 12px;">
-          Want the one-page PDF version?
-        </p>
-        <a class="btn primary" href="resume.pdf" target="_blank" rel="noreferrer">Open Resume (PDF)</a>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
+        <p style="margin: 0 0 10px;">
+          The fastest way to reach me is email. I’m also active on GitHub and LinkedIn.
+        </p>
         <p style="margin: 0 0 8px;"><strong>Email:</strong> <a class="inline" href="mailto:krenaresyla13@gmail.com">krenaresyla13@gmail.com</a></p>
-        <p style="margin: 0 0 8px;"><strong>Phone:</strong> 832-855-5958</p>
         <p style="margin: 0 0 8px;"><strong>GitHub:</strong> <a class="inline" href="https://github.com/krenares" target="_blank" rel="noreferrer">github.com/krenares</a></p>
         <p style="margin: 0;"><strong>LinkedIn:</strong> <a class="inline" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noreferrer">linkedin.com/in/krenaresyla</a></p>
       </div>
