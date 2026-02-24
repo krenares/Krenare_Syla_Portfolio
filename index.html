@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Krenare Syla | Software Engineer</title>
-  <meta
-    name="description"
-    content="Krenare Syla - Software Engineer portfolio. Backend systems, APIs, and AI-enabled applications. Featured projects, experience snapshot, skills, education, and contact."
+  <meta name="description"
+    content="Krenare Syla - Software Engineer portfolio. Backend systems, APIs, integrations, and AI-enabled applications. Projects, experience snapshot, skills, education, and contact."
   />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Krenare Syla | Software Engineer" />
+  <meta property="og:description" content="Backend systems, APIs, integrations, and AI-enabled applications. Projects, experience, skills, and contact." />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="assets/og.png" /> -->
+
   <style>
-    
     :root{
       --bg: #0b1220;
       --panel: rgba(255,255,255,0.06);
@@ -77,14 +81,32 @@
       box-shadow: 0 0 0 6px rgba(56,189,248,0.08);
     }
 
+    nav{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+      gap: 2px;
+    }
+
     nav a{
       text-decoration:none;
       color: var(--muted);
       font-weight: 600;
       font-size: 13px;
-      margin-left: 10px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
     }
-    nav a:hover{ color: var(--text); }
+    nav a:hover{
+      color: var(--text);
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+    }
+    nav a.active{
+      color: var(--text);
+      border-color: rgba(56,189,248,0.35);
+      background: rgba(56,189,248,0.10);
+    }
 
     header{
       padding: 26px 0 8px;
@@ -129,7 +151,7 @@
       text-decoration:none;
       font-weight: 650;
       font-size: 14px;
-      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, opacity .12s ease;
     }
     .btn:hover{
       transform: translateY(-1px);
@@ -141,27 +163,10 @@
       color: var(--accent);
       border-color: rgba(56,189,248,0.35);
     }
-
-    .avatar{
-      width: 92px;
-      height: 92px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .avatar img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .avatarHint{
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      text-align: center;
+    .btn.disabled{
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
     }
 
     section{ margin-top: 42px; }
@@ -260,12 +265,13 @@
 <body>
   <div class="wrap">
 
-    <div class="topbar">
+    <div class="topbar" id="home">
       <div class="brand">
         <span class="dot"></span>
         <span>Krenare Syla</span>
       </div>
-      <nav>
+      <nav id="nav">
+        <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -279,25 +285,17 @@
         <div class="kicker">Software Engineer</div>
         <h1>Krenare Syla</h1>
         <p class="subtitle">
-          Backend-focused engineer building scalable APIs, integrations, and AI-enabled applications.
-          Comfortable across the stack (FastAPI/Django + React) with a strong emphasis on reliability and clean system design.
+          Full-Stack Software Engineer building scalable APIs, system integrations, and modern web applications.
+          Experienced with FastAPI/Django on the backend and React on the frontend, with a strong focus on clean architecture,
+          performance, and production reliability.
         </p>
 
         <div class="cta">
-          <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           <a class="btn" href="mailto:krenaresyla13@gmail.com">Email</a>
         </div>
-      </div>
-
-      <!-- Photo is optional — add your LinkedIn headshot as /assets/profile.jpg -->
-      <div>
-        <div class="avatar" title="Profile photo">
-          <!-- Replace this with your actual image path -->
-          <img src="assets/profile.jpg" alt="Krenare Syla headshot" />
-        </div>
-        <div class="avatarHint">Optional photo</div>
       </div>
     </header>
 
@@ -305,36 +303,38 @@
       <h2>Featured Projects</h2>
 
       <div class="grid two">
+        <!-- Project 1: AI Financial Advisor -->
         <div class="card">
           <div class="row">
-            <h3 style="margin:0;">AI Teaching Assistant</h3>
-            <div class="when">LLM + Full-stack</div>
+            <h3 style="margin:0;">AI Financial Advisor</h3>
+            <div class="when">Production · LLM · Cloud Run</div>
           </div>
 
           <p class="muted" style="margin: 8px 0 0;">
-            An AI-powered teaching assistant that answers student questions with a structured response flow.
-            Built for speed and reliability with a clean API boundary between frontend and backend.
+            Production-deployed AI personal finance assistant that provides budgeting guidance and actionable insights
+            via a structured conversational interface. Designed with a clean service boundary to keep prompts,
+            validation, and response formatting maintainable.
           </p>
 
           <ul>
-            <li>Integrated an LLM (Gemini) with prompt patterns to keep responses consistent and safe.</li>
-            <li>Designed backend endpoints for real-time interactions and predictable response formats.</li>
-            <li>Deployed with cloud infrastructure for scalability (replace with your actual hosting).</li>
+            <li>Integrated Google Gemini API with structured prompts to keep outputs consistent and user-safe.</li>
+            <li>Built a React + TypeScript frontend and maintained a clear separation between UI, service layer, and LLM provider.</li>
+            <li>Containerized and deployed to Google Cloud Run with secure environment configuration.</li>
           </ul>
 
-          <p style="margin: 10px 0 0;"><strong>Tech:</strong> Python, FastAPI, React, Gemini, AWS</p>
+          <p style="margin: 10px 0 0;"><strong>Tech:</strong> React (Vite + TypeScript), Docker, Google Cloud Run, Gemini API</p>
 
           <div class="cta" style="margin-top: 12px;">
-            <!-- Replace with your repo + demo links -->
-            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">Code</a>
-            <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            <a class="btn primary" href="https://github.com/krenares/ai-personal-finance-assistant" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="btn" href="https://ai-personal-finance-assistant-941458672134.us-west1.run.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
           </div>
 
           <div class="taglist">
-            <span class="tag">API Design</span><span class="tag">Prompt Engineering</span><span class="tag">Cloud Deploy</span>
+            <span class="tag">LLM Integration</span><span class="tag">Cloud Deployment</span><span class="tag">Service Layer</span>
           </div>
         </div>
 
+        <!-- Project 2: E-commerce Thesis -->
         <div class="card">
           <div class="row">
             <h3 style="margin:0;">E-commerce Platform (Thesis)</h3>
@@ -346,15 +346,15 @@
           </p>
 
           <ul>
-            <li>Implemented REST APIs with clear resources, validations, and error handling.</li>
+            <li>Implemented REST APIs with clear resource modeling, validations, and predictable error handling.</li>
             <li>Containerized services and set up CI/CD for consistent builds and deployments.</li>
-            <li>Modeled relational data for products, orders, and user flows.</li>
+            <li>Designed relational data models for products, orders, users, and payment-ready flows.</li>
           </ul>
 
           <p style="margin: 10px 0 0;"><strong>Tech:</strong> Django, React, PostgreSQL, Docker, CI/CD</p>
 
           <div class="cta" style="margin-top: 12px;">
-            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn primary" href="https://github.com/krenares" target="_blank" rel="noopener noreferrer">Code</a>
           </div>
 
           <div class="taglist">
@@ -363,34 +363,7 @@
         </div>
       </div>
 
-      <div class="card" style="margin-top: 14px;">
-        <div class="row">
-          <h3 style="margin:0;">AI Tutor Application</h3>
-          <div class="when">In Progress</div>
-        </div>
-
-        <p class="muted" style="margin: 8px 0 0;">
-          Full-stack AI tutoring app with authentication and a structured “bellwork” learning flow.
-          Designed to produce consistent, actionable feedback to students.
-        </p>
-
-        <ul>
-          <li>Authentication + role-aware flows (student-focused UX).</li>
-          <li>Backend endpoints structured for predictable AI feedback cycles.</li>
-          <li>PostgreSQL schema to support users, sessions, and learning history.</li>
-        </ul>
-
-        <p style="margin: 10px 0 0;"><strong>Tech:</strong> FastAPI, React, PostgreSQL</p>
-
-        <div class="cta" style="margin-top: 12px;">
-          <!-- Replace YOUR_REPO_NAME -->
-          <a class="btn primary" href="https://github.com/krenares/YOUR_REPO_NAME" target="_blank" rel="noreferrer">Code</a>
-        </div>
-
-        <div class="taglist">
-          <span class="tag">Auth</span><span class="tag">API Contracts</span><span class="tag">Product Thinking</span>
-        </div>
-      </div>
+      <!-- Optional: If you want a 3rd project later, duplicate a card here -->
     </section>
 
     <section id="experience">
@@ -426,7 +399,7 @@
       </div>
 
       <p class="muted" style="margin-top: 12px;">
-        Full details are available on the <a class="inline" href="resume.pdf" target="_blank" rel="noreferrer">resume</a>.
+        Full details are available on the <a class="inline" href="resume.pdf" target="_blank" rel="noopener">resume</a>.
       </p>
     </section>
 
@@ -447,7 +420,7 @@
         <div class="card">
           <h3>Technologies</h3>
           <p class="muted" style="margin: 8px 0 0;">
-            Python · Java · JavaScript · SQL · Django · FastAPI · React · PostgreSQL · Docker · AWS · Google Cloud
+            Python · Java · JavaScript · TypeScript · SQL · Django · FastAPI · React · PostgreSQL · Docker · AWS · Google Cloud
           </p>
           <div class="taglist">
             <span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">MongoDB</span><span class="tag">MySQL</span>
@@ -487,8 +460,8 @@
           The fastest way to reach me is email. I’m also active on GitHub and LinkedIn.
         </p>
         <p style="margin: 0 0 8px;"><strong>Email:</strong> <a class="inline" href="mailto:krenaresyla13@gmail.com">krenaresyla13@gmail.com</a></p>
-        <p style="margin: 0 0 8px;"><strong>GitHub:</strong> <a class="inline" href="https://github.com/krenares" target="_blank" rel="noreferrer">github.com/krenares</a></p>
-        <p style="margin: 0;"><strong>LinkedIn:</strong> <a class="inline" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noreferrer">linkedin.com/in/krenaresyla</a></p>
+        <p style="margin: 0 0 8px;"><strong>GitHub:</strong> <a class="inline" href="https://github.com/krenares" target="_blank" rel="noopener noreferrer">github.com/krenares</a></p>
+        <p style="margin: 0;"><strong>LinkedIn:</strong> <a class="inline" href="https://www.linkedin.com/in/krenaresyla/" target="_blank" rel="noopener noreferrer">linkedin.com/in/krenaresyla</a></p>
       </div>
     </section>
 
@@ -497,5 +470,32 @@
     </footer>
 
   </div>
+
+  <script>
+    // Active nav link highlight as you scroll
+    (function () {
+      const nav = document.getElementById("nav");
+      if (!nav) return;
+
+      const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+      const targets = links
+        .map(a => document.querySelector(a.getAttribute("href")))
+        .filter(Boolean);
+
+      const setActive = () => {
+        let best = targets[0];
+        for (const s of targets) {
+          const r = s.getBoundingClientRect();
+          if (r.top <= 140) best = s;
+        }
+        links.forEach(a => a.classList.remove("active"));
+        const activeLink = links.find(a => a.getAttribute("href") === "#" + best.id);
+        if (activeLink) activeLink.classList.add("active");
+      };
+
+      window.addEventListener("scroll", setActive, { passive: true });
+      setActive();
+    })();
+  </script>
 </body>
 </html>
